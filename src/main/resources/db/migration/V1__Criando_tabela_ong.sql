@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS ong (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    cnpj VARCHAR(15) NOT NULL,
+    objetivo VARCHAR(1000) NOT NULL,
+    contato VARCHAR(15) NOT NULL,
+    endereco VARCHAR(500) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    site VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+

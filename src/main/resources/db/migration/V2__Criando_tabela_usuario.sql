@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(15) NOT NULL,
+    PRIMARY KEY (id)
+);
