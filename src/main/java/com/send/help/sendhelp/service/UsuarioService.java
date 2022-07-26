@@ -2,6 +2,9 @@ package com.send.help.sendhelp.service;
 
 import com.send.help.sendhelp.model.Usuario;
 import com.send.help.sendhelp.repository.UsuarioRepository;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,4 +17,8 @@ public class UsuarioService {
     public Usuario salvarUsuario(Usuario usuario){
         return usuarioRepository.save(usuario);
     }
+    public List<Usuario> listar(){
+    	return usuarioRepository.findAll();
+    }
+    
 }
