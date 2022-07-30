@@ -39,4 +39,15 @@ public class UsuarioService {
         }
         throw new RuntimeException("Usuario não existe");
     }
+
+    public Usuario atualizarEmail(Usuario usuario) {
+        Optional<Usuario> objUsuario = usuarioRepository.findById(usuario.getId());
+
+        if(objUsuario.isPresent()){
+            objUsuario.get().setEmail(usuario.getEmail());
+            return usuarioRepository.save(objUsuario.get());
+        }
+
+        throw new RuntimeException("Usuário não encontrado");
+    }
 }

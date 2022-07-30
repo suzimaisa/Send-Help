@@ -38,4 +38,8 @@ public class UsuarioResource {
         return usuarioService.atualizarUsuario(usuario);
     }
 
+    @PatchMapping(path = "{id}")
+    public Usuario atualizarEmailDoUsuario(@PathVariable int id, @RequestBody Usuario usuario) {
+        return usuarioService.atualizarEmail(usuario);
+    }
 }
