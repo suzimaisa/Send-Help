@@ -26,4 +26,10 @@ public class UsuarioResource {
     private List<Usuario> listarUsuarios(){
     	return usuarioService.listar();
     }
+
+    @GetMapping(path = "{email}")
+    private Usuario buscarUsuarioPeloEmail(@PathVariable String email) {
+        return usuarioService.buscarUsuarioPeloEmail(email);
+    }
+
 }
