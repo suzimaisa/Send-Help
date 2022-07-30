@@ -32,4 +32,10 @@ public class UsuarioResource {
         return usuarioService.buscarUsuarioPeloEmail(email);
     }
 
+    @PutMapping(path = "{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    private Usuario atualizarUsuario(@PathVariable int id, @RequestBody Usuario usuario) {
+        return usuarioService.atualizarUsuario(usuario);
+    }
+
 }

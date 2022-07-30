@@ -31,4 +31,12 @@ public class UsuarioService {
 
         throw new RuntimeException("Usuário não encontrado");
     }
+
+    public Usuario atualizarUsuario(Usuario usuario){
+        if(usuarioRepository.existsById(usuario.getId())){
+            Usuario objUsuario = usuarioRepository.save(usuario);
+            return objUsuario;
+        }
+        throw new RuntimeException("Usuario não existe");
+    }
 }
